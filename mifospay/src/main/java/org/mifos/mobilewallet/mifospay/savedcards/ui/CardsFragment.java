@@ -3,6 +3,7 @@ package org.mifos.mobilewallet.mifospay.savedcards.ui;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.chip.Chip;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -67,6 +68,9 @@ public class CardsFragment extends BaseFragment implements CardsContract.CardsVi
     @Inject
     CardsAdapter mCardsAdapter;
 
+    @BindView(R.id.btn_add_card)
+    Chip addCard;
+
     View rootView;
 
     public static CardsFragment newInstance() {
@@ -103,6 +107,7 @@ public class CardsFragment extends BaseFragment implements CardsContract.CardsVi
             public void onRefresh() {
                 getSwipeRefreshLayout().setRefreshing(false);
                 mCardsPresenter.fetchSavedCards();
+                addCard.setVisibility(View.VISIBLE);
             }
         });
     }
@@ -125,6 +130,7 @@ public class CardsFragment extends BaseFragment implements CardsContract.CardsVi
     public void showErrorStateView(int drawable, int title, int subtitle) {
         rvCards.setVisibility(View.GONE);
         pbCards.setVisibility(View.GONE);
+        addCard.setVisibility(View.GONE);
         hideSwipeProgress();
         vStateView.setVisibility(View.VISIBLE);
         if (getActivity() != null) {
@@ -241,10 +247,12 @@ public class CardsFragment extends BaseFragment implements CardsContract.CardsVi
         if (cards == null || cards.size() == 0) {
             showEmptyStateView();
             rvCards.setVisibility(View.GONE);
+            addCard.setVisibility(View.VISIBLE);
         } else {
             hideEmptyStateView();
             rvCards.setVisibility(View.VISIBLE);
             mCardsAdapter.setCards(cards);
+            addCard.setVisibility(View.VISIBLE);
         }
         mCardsAdapter.setCards(cards);
         hideSwipeProgress();
