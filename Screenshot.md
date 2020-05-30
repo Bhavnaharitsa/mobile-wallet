@@ -1,6 +1,6 @@
 |Splash Screen|Login Screen|Selecting User Type|
-|------|------|------|
-|<img src="https://user-images.githubusercontent.com/46667021/82584052-8ddfea00-9bb1-11ea-92a9-8c83abf6322e.jpg" width="288" height="500" />|<img src="https://user-images.githubusercontent.com/46667021/82584248-d8616680-9bb1-11ea-97b2-6a6e5129687a.jpg" width="288" height="500" />|<img src="https://user-images.githubusercontent.com/46667021/82584330-faf37f80-9bb1-11ea-8443-bb676a99d714.jpg" width="288" height="500" />|
+|:---:|:---:|:---:|
+|<img src="https://user-images.githubusercontent.com/46667021/82584052-8ddfea00-9bb1-11ea-92a9-8c83abf6322e.jpg" />|<img src="https://user-images.githubusercontent.com/46667021/82584248-d8616680-9bb1-11ea-97b2-6a6e5129687a.jpg"  />|<img src="https://user-images.githubusercontent.com/46667021/82584330-faf37f80-9bb1-11ea-8443-bb676a99d714.jpg" />|
 
 |Google Signup|Mobile Verification|Registration Screen|
 |------|------|------|
